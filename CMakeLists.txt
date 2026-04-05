@@ -1,12 +1,22 @@
-cmake_minimum_required(VERSION 3.10)
-project(IndustrialMotionControl VERSION 1.0.0 LANGUAGES  CXX)
+cmake_minimum_required(VERSION 3.16)
+cmake_policy(SET CMP0100 NEW)
+
+project(IndustrialMotionControl VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+if(NOT DEFINED CMAKE_PREFIX_PATH)
+    set(CMAKE_PREFIX_PATH "C:/Qt/6.5.3/mingw_64")
+endif()
+
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 add_subdirectory(src)

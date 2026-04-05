@@ -1,0 +1,50 @@
+# ============ 构建目录 ============
+build/
+bin/
+out/
+cmake-build-*/
+
+# ============ 编译产物 ============
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.o
+*.obj
+*.pdb
+
+# ============ CMake生成文件 ============
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# ============ Qt生成文件 ============
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*_autogen/
+
+# ============ IDE和编辑器 ============
+.vscode/
+.idea/
+*.pro.user
+*.autosave
+*~
+
+# ============ 日志文件 ============
+*.log
+
+# ============ 系统文件 ============
+.DS_Store
+Thumbs.db
+
+# ============ 临时文件 ============
+*.tmp
+*.temp
+*.swp
